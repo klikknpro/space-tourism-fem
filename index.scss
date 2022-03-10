@@ -1,3 +1,13 @@
+/* Custom Properties begin */
+
+:root {
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+}
+
+/* Custom Properties end */
+
 /* CSS Reset begin */
 
 /* box sizing */
@@ -75,6 +85,7 @@ a {
 /* CSS Reset end */
 
 /* Utility Classes begin */
+
 /*
 • makes things modular
 • does 1 thing only
@@ -100,7 +111,8 @@ a {
 
 /*
 for screen reader technology
-visually hide content from visually impaired users, but keep the content in the page
+visually hide content from visually impaired users, but keep the content in the page (not in the flow)
+display: none would take it out of the DOM
 */
 .sr-only {
   position: absolute;
@@ -112,4 +124,28 @@ visually hide content from visually impaired users, but keep the content in the 
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+/* Colors (of Utility Classes) */
+
+/* Utility Classes end */
+
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+.bg-accent {
+  background-color: hsl(var(--clr-light));
+}
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+.text-accent {
+  color: hsl(var(--clr-light));
+}
+.text-white {
+  color: hsl(var(--clr-white));
 }
