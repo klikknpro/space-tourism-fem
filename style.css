@@ -84,6 +84,13 @@ a {
 
 /* CSS Reset end */
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+/* font-family: 'Barlow Condensed', sans-serif; */
+
+* {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
 /* Utility Classes begin */
 
 /*
@@ -109,6 +116,10 @@ a {
   max-width: 80rem;
 }
 
+.card-width {
+  width: 200px;
+}
+
 /*
 for screen reader technology
 visually hide content from visually impaired users, but keep the content in the page (not in the flow)
@@ -128,8 +139,6 @@ display: none would take it out of the DOM
 
 /* Colors (of Utility Classes) */
 
-/* Utility Classes end */
-
 .bg-dark {
   background-color: hsl(var(--clr-dark));
 }
@@ -138,6 +147,10 @@ display: none would take it out of the DOM
 }
 .bg-white {
   background-color: hsl(var(--clr-white));
+}
+
+.example-component {
+  background-color: hsl(var(--clr-light) / 0.2);
 }
 
 .text-dark {
@@ -149,3 +162,5 @@ display: none would take it out of the DOM
 .text-white {
   color: hsl(var(--clr-white));
 }
+
+/* Utility Classes end */
