@@ -1,4 +1,5 @@
-/* CSS Reset */
+@charset "UTF-8";
+/* CSS Reset begin */
 /* box sizing */
 *,
 *::before,
@@ -69,5 +70,46 @@ a {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* CSS Reset end */
+/* Utility Classes begin */
+/*
+• makes things modular
+• does 1 thing only
+*/
+.flex {
+  display: flex;
+  /* Custom Property with a given default value */
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  /* Custom Property with a given default value */
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2em;
+  max-width: 80rem;
+}
+
+/*
+for screen reader technology
+visually hide content from visually impaired users, but keep the content in the page
+*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
 }
 /*# sourceMappingURL=index.css.map */
