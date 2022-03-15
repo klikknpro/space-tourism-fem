@@ -16,6 +16,7 @@ font-family: 'Bellefair', serif;
 /* CUSTOM PROPERTIES */
 /* === === === */
 
+/* create global variables inside :root */
 :root {
   /* colors */
   --clr-dark: 230 35% 7%;
@@ -328,4 +329,38 @@ display: none would take it out of the DOM
 .large-button:focus::after {
   opacity: 1;
   transform: scale(1.5);
+}
+
+.primary-navigation {
+  padding: 0;
+  margin: 0;
+  /* itt csak modositom a .flex classbol orokolt --gap valtozot */
+  --gap: 8rem;
+  --underline-gap: 2rem;
+
+  list-style: none;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a span {
+  margin-right: 0.5em;
+  font-weight: 700;
+}
+
+/* selecting all direct child elements */
+.underline-indicators > * {
+  padding: var(--underline-gap, 1rem) 0;
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl(var(--clr-white) / 0.5);
+}
+
+.underline-indicators > .active {
+  border-color: hsl(var(--clr-white));
 }
