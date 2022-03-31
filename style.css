@@ -159,7 +159,7 @@ p {
 }
 
 .flow > *:not(:first-child) {
-  margin-top: 1rem;
+  margin-top: var(--flow-space, 1rem);
 }
 
 .container {
@@ -371,4 +371,48 @@ display: none would take it out of the DOM
 
 .tab-list {
   --gap: 2rem;
+}
+
+.dot-indicators > * {
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50%;
+  border: 0;
+  background-color: hsl(var(--clr-white) / 0.17);
+  cursor: pointer;
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+  background-color: hsl(var(--clr-white) / 0.5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-white) / 1);
+}
+
+.numbered-indicators > * {
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+  border: 1px solid hsl(var(--clr-light) / 0.25);
+  background-color: hsl(var(--clr-white) / 0);
+  cursor: pointer;
+
+  color: var(--clr-white);
+  font-family: var(--ff-serif);
+  font-size: var(--fs-600);
+}
+
+.numbered-indicators > *:hover,
+.numbered-indicators > *:focus {
+  border: 2px solid hsl(var(--clr-light) / 1);
+}
+
+.numbered-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-dark));
+  border: 0;
 }
